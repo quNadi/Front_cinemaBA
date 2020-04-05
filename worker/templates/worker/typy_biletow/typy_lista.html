@@ -1,0 +1,28 @@
+{% extends 'worker/base_pagination.html' %}
+{% block content_pagination %}
+    {% if 'Administratorzy' in  request.user.groups.values.0.name %}
+        <a href="{% url 'tickettype-create-worker' %}">Dodaj typ biletu</a><br><br>
+        {% if not deleted_list %}
+            <a href="{% url 'tickettype-deleted-list-worker' %}">Usunięte typy biletów</a>
+            <h3>Lista typów biletów:</h3>
+        {% else %}
+            <h3>Lista usuniętych typów biletów:</h3>
+        {% endif %}
+    {% endif %}
+    <table>
+        <th></th>
+        <th>Typ biletu</th>
+        <th>Cena</th>
+        <th></th>
+        {% for ticket in tickettype_list %}
+            <tr>
+                <td>{{ forloop.counter }}.</td>
+                <td>{{ ticket.type }}</td>
+                <td>{{ ticket.price }}</td>
+                <td>
+                    <a href="{% url 'tickettype-details-worker' ticket.ticket_id %}">Przejdź do szczegółów</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

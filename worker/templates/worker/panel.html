@@ -1,0 +1,10 @@
+{% extends 'worker/base.html' %}
+{% block content %}
+    <br><br>
+    {% if user.get_username == 'admin' %}
+        <a href="{% url 'admin:index' %}">Zarządzanie grupami i użytkownikami</a><br>
+    {% endif %}<br>
+    <a href="{% url 'showtime-list-worker' %}">Seanse</a><br>
+    <a href="{% url 'movie-list-worker' %}">Filmy</a><br>
+    <a href="{% url 'tickettype-list-worker' %}">Typy biletów</a><br>
+{% endblock %}
