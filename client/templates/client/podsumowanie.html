@@ -6,33 +6,30 @@
     {% elif taken|length > 10 %}
         <h2>Możesz zarezerwowoać maksymalnie 10 miejesc!</h2>
     {% else %}
-        <div class="jumbotron jumbotron-fluid">
-  <div class="container">
+        <div class="jumbotron jumbotron-fluid" style="opacity: 85%">
+  <div class="container" style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif">
         <h3 class="display-4">Podsumowanie</h3>
         <form action="" method="post">
             {% csrf_token %}
             <table>
                 <tr class="table-secondary">
-                    <td>Seans</td>
+                    <td>Seans  :</td>
                     <td>{{ showtime }}</td>
                 </tr>
-                <tr class="table-secondary"
-                    <td></td>
-                </tr>
-                <tr class="table-secondary"
-                    <td>Imię</td>
+                <tr class="table-secondary">
+                    <td>Imię  : </td>
                     <td>{{ client_initial.first_name }}</td>
                 </tr>
-                <tr class="table-secondary"
-                    <td>Nazwisko</td>
+                <tr class="table-secondary">
+                    <td>Nazwisko  : </td>
                     <td> {{ client_initial.last_name }}</td>
                 </tr>
-                <tr class="table-secondary"
-                    <td>Email</td>
+                <tr class="table-secondary">
+                    <td>Email  :</td>
                     <td> {{ client_initial.email }}</td>
                 </tr>
-                <tr class="table-secondary"
-                    <td>Numer telefonu</td>
+                <tr class="table-secondary">
+                    <td>Numer telefonu   :</td>
                     <td> {{ client_initial.phone_number }}</td>
                 </tr>
             </table>
@@ -53,7 +50,7 @@
             <b>Do zapłaty: {{ total }} PLN</b>
             {{ client_form }}
             {{ reservation_form }}<br><br>
-            <input class="btn btn-info" type="submit" value="Zarezerwuj"/>
+            <input class="btn-lg btn-info" type="submit" value="Zarezerwuj"/>
         </form>
   </div>
         </div>

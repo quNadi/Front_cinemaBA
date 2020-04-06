@@ -52,7 +52,7 @@
                             {% for i in s_form.seats_row_a %}
                                 {% if i.data.selected %}
                                     <label for="{{ i.data.id }}"></label>
-                                    <input type="checkbox" class="form-check-input" name="{{ i.data.name }}" value="{{ i.data.value }}"
+                                    <input type="checkbox" name="{{ i.data.name }}" value="{{ i.data.value }}"
                                            id="{{ i.data.id }}" checked disabled>
                                 {% else %}
                                     {{ i }}
