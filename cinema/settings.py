@@ -55,6 +55,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'cinema.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

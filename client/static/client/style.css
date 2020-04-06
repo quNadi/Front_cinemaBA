@@ -24,7 +24,6 @@ body {
     margin-top: auto;
     margin-left: 20px;
     margin-right: 20px;
-    font-family: "Nova-Mono";
 }
 
 h1.logo-text {
@@ -33,6 +32,10 @@ h1.logo-text {
     color: #ddd;
     text-align: center;
     letter-spacing: 5px;
+}
+
+b {
+    font-size: 20px;
 }
 
 h2 {

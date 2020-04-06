@@ -60,12 +60,8 @@
     <br><br><br>
 
 
-        <div class="card text-center" style="box-shadow:0 8px 6px -6px black; padding: 10px; border:20px;margin-left: 100px; margin-top:30px; background: darkgray; margin-bottom: 200px; width:50rem;">
-        <div class="card-title"> <h2>Normalny* - sprzedawany bez dodatkowych dokumentów kwalifikujących do ceny ulgowej <br>
-        Ulgowy** - sprzedawany wyłącznie za ukazaniem ważnej legitymacji uczniowskiej/studenckiej
-    </h2>
-        </div>
-<div class="card-body">
+        <div class="card text-center" style="15 padding: 10px; border:20px;margin-left: 100px; margin-top:30px; background: darkgray; opacity: 90%; margin-bottom: 200px; width:50rem;">
+<div class="card-body" style="font-size:18px">
     {% for ticket in ticket_types %}
         {{ ticket.type }} - {{ ticket.conditions }}<br>
     {% endfor %}
