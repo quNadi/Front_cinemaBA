@@ -5,7 +5,7 @@
     <h1 class="logo-text">Rezerwacja</h1>
 {% endblock %}
 {% block content %}
-    <div class="card" style="width: 50rem; margin-left:400px;box-shadow:0 8px 6px -6px black; margin-bottom: 10px; padding-left: 30px;padding-top: 15px; padding-bottom: 10px; background-color: #d8d8d8; opacity: 90%">
+    <div class="card" style="width: 50rem; margin-left:400px; padding-right:70px; box-shadow:0 8px 6px -6px black; margin-bottom: 10px; padding-left: 30px;padding-top: 15px; padding-bottom: 30px; background-color: #d8d8d8; opacity: 90%">
     {% if taken|length > 0 %}
         <h3 style="font-family: 'Nova Round'">Wybierz typy biletów</h3>
         <form action="" method="post">
@@ -44,7 +44,7 @@
                     {% else %}
                         Miejsce: {{ form.seat_id.initial }}
                     {% endif %}
-                    {{ form.as_p }}
+                    {{ form|crispy }}
                 {% endfor %}
             </table>
             {{ client_form }}
