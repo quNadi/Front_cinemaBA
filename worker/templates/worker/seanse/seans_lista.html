@@ -8,13 +8,13 @@
     {% else %}
         <h3>Lista archiwalnych seansów: </h3>
     {% endif %}
-    <table>
-        <tr>
+    <table class="table-striped">
+        <thead style="color:darkblue">
             <th></th>
             <th>Tytuł seansu</th>
             <th>Data rozpoczęcia</th>
             <th>Data Zakończenia</th>
-        </tr>
+        </thead>
 
         {% for showtime in showtime_list %}
             <tr>

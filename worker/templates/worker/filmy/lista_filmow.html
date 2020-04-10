@@ -11,10 +11,12 @@
     {% else %}
         <h3>Lista usuniętych filmów:</h3>
     {% endif %}
-    <table>
+    <thead class="table-striped">
         <th></th>
+    <thead style="color:darkblue">
         <th>Tytuł filmu</th>
         <th>Usunięty</th>
+    </thead>
         {% for movie in movie_list %}
             <tr>
                 <td>{{ forloop.counter }}.</td>

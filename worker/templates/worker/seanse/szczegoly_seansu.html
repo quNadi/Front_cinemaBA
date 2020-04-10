@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{% static 'worker/style.css' %}">
 {% endblock %}
 {% block content %}
+
     {% if messages %}
         {% for message in messages %}
             {{ message }}
@@ -31,19 +32,19 @@
         <a href="{% url 'reservation-form-worker' showtime.showtime_id %}">Dodaj rezerwację</a>
     {% endif %}
     <br>
-    <table>
-        <tr>
-            <th>Imię i Nazwisko</th>
+    <table class="table-striped">
+        <thead style="color: darkblue">
+            <th>Imię i Nazwisko &nbsp</th>
             <th>Email</th>
             <th>Telefon</th>
             <th>Do zapłaty</th>
-            <th>Opłacona</th>
-            <th>Potwierdzona</th>
-            <th>Data rezerwacji</th>
-            <th>Opłacenie/Potwierdzenie</th>
-            <th>Edycja</th>
-            <th>Usuwanie</th>
-        </tr>
+            <th>Opłacona &nbsp</th>
+            <th>Potwierdzona &nbsp</th>
+            <th>Data rezerwacji &nbsp</th>
+            <th>Opłacenie/Potwierdzeni &nbspe</th>
+            <th>Edycja &nbsp</th>
+            <th>Usuwanie &nbsp</th>
+        </thead>
         {% for reservation in reservations %}
             <tr>
                 <td>{{ forloop.counter }}. {{ reservation.client_id.first_name }} {{ reservation.client_id.last_name }}</td>
@@ -80,4 +81,5 @@
         {% endfor %}
         <script src="{% static 'worker/js/seanse/ukryj_pokaz_bilety.js' %}"></script>
     </table>
+
 {% endblock %}
